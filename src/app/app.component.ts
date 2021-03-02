@@ -25,4 +25,7 @@ export class AppComponent {
   newnote() {
     this.router.navigate([""]);
   }
+  godetail() {
+    this.router.navigate(["/detail/"]);
+  }
 }
