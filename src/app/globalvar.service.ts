@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class GlobalvarService {
-private Datajudul: string = "usercoba";
-private Dataisi: string = "usercoba";
-private Datatanggal: string = "usercoba";
+private Datajudul: string = "";
+private Dataisi: string = "";
+private Datatanggal: string = "";
 
   constructor() { }
 
