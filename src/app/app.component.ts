@@ -28,4 +28,7 @@ export class AppComponent {
   godetail() {
     this.router.navigate(["/detail/"]);
   }
+  gofavo() {
+    this.router.navigate(["/favourite/"]);
+  }
 }
