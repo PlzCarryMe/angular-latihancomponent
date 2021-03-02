@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalvarService } from "../globalvar.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-favourite',
@@ -8,7 +9,7 @@ import { GlobalvarService } from "../globalvar.service";
 })
 export class FavouriteComponent implements OnInit {
 
-  constructor( public globalvar: GlobalvarService) { }
+  constructor( public globalvar: GlobalvarService, private router: Router) { }
 
 paramtanggal;
 paramisi;
@@ -18,6 +19,10 @@ paramjudul;
     this.paramjudul = this.globalvar.getjudul();
     this.paramtanggal = this.globalvar.gettanggal();
     this.paramisi = this.globalvar.getisi();
+  }
+
+  back(){
+    this.router.navigate(["/detail/"]);
   }
 
 }

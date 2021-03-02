@@ -8,9 +8,7 @@ import { GlobalvarService } from "./globalvar.service";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  constructor(private router: Router, public globalvar: GlobalvarService) {
-    
-  }
+  constructor(private router: Router, public globalvar: GlobalvarService) {}
 
   judul = "";
   isi = "";
@@ -20,8 +18,11 @@ export class AppComponent {
     this.globalvar.setjudul(this.judul);
     this.globalvar.setisi(this.isi);
     this.globalvar.settanggal(this.tanggal);
-    
+
     this.router.navigate(["/detail/"]);
   }
 
+  newnote() {
+    this.router.navigate([""]);
+  }
 }
